@@ -55,14 +55,6 @@ public class ScreenNavigationRegistry {
 	protected void activate(BundleContext bundleContext) {
 		_bundleContext = bundleContext;
 
-		_screenNavigationEntriesMap =
-			ServiceTrackerMapFactory.openMultiValueMap(
-				bundleContext, ScreenNavigationEntry.class, null,
-				new ScreenNavigationEntriesServiceReferenceMapper(),
-				Collections.reverseOrder(
-					new PropertyServiceReferenceComparator(
-						"screen.navigation.entry.order")));
-
 		_screenNavigationCategoriesMap =
 			ServiceTrackerMapFactory.openMultiValueMap(
 				bundleContext, ScreenNavigationCategory.class, null,
@@ -70,6 +62,13 @@ public class ScreenNavigationRegistry {
 				Collections.reverseOrder(
 					new PropertyServiceReferenceComparator(
 						"screen.navigation.category.order")));
+		_screenNavigationEntriesMap =
+			ServiceTrackerMapFactory.openMultiValueMap(
+				bundleContext, ScreenNavigationEntry.class, null,
+				new ScreenNavigationEntriesServiceReferenceMapper(),
+				Collections.reverseOrder(
+					new PropertyServiceReferenceComparator(
+						"screen.navigation.entry.order")));
 	}
 
 	@Deactivate
