@@ -26,7 +26,7 @@
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 		<attribute>
-			<description>Additional JavaScript module dependencies.</description>
+			<description>Additional dependencies.</description>
 			<name>dependencies</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
