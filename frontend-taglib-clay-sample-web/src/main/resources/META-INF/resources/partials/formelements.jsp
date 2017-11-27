@@ -95,7 +95,6 @@ for (int i = 0; i < 8; i++) {
 	Map<String, Object> option = new HashMap<>();
 
 	option.put("label", "Sample " + i);
-
 	option.put("value", i);
 
 	options.add(option);
