@@ -48,6 +48,7 @@
 	<div class="col-md-2">
 		<div class="aspect-ratio">
 			<img class="aspect-ratio-item-fluid" src="https://claycss.com/images/thumbnail_hot_air_ballon.jpg" />
+
 			<clay:sticker label="PDF" position="top-left" style="danger" />
 		</div>
 	</div>
@@ -55,6 +56,7 @@
 	<div class="col-md-2">
 		<div class="aspect-ratio">
 			<img class="aspect-ratio-item-fluid" src="https://claycss.com/images/thumbnail_hot_air_ballon.jpg" />
+
 			<clay:sticker label="PDF" position="bottom-left" style="danger" />
 		</div>
 	</div>
@@ -62,6 +64,7 @@
 	<div class="col-md-2">
 		<div class="aspect-ratio">
 			<img class="aspect-ratio-item-fluid" src="https://claycss.com/images/thumbnail_hot_air_ballon.jpg" />
+
 			<clay:sticker label="PDF" position="top-right" style="danger" />
 		</div>
 	</div>
@@ -69,6 +72,7 @@
 	<div class="col-md-2">
 		<div class="aspect-ratio">
 			<img class="aspect-ratio-item-fluid" src="https://claycss.com/images/thumbnail_hot_air_ballon.jpg" />
+
 			<clay:sticker label="PDF" position="bottom-right" style="danger" />
 		</div>
 	</div>
