@@ -21,31 +21,37 @@
 <div class="row text-center">
 	<div class="col-md-1">
 		<clay:badge label="8" />
+
 		<div>Primary</div>
 	</div>
 
 	<div class="col-md-1">
 		<clay:badge label="87" style="secondary" />
+
 		<div>Secondary</div>
 	</div>
 
 	<div class="col-md-1">
 		<clay:badge label="91" style="info" />
+
 		<div>Info</div>
 	</div>
 
 	<div class="col-md-1">
 		<clay:badge label="130" style="danger" />
+
 		<div>Error</div>
 	</div>
 
 	<div class="col-md-1">
 		<clay:badge label="1111" style="success" />
+
 		<div>Success</div>
 	</div>
 
 	<div class="col-md-1">
 		<clay:badge label="21" style="warning" />
+
 		<div>Warning</div>
 	</div>
 </div>
