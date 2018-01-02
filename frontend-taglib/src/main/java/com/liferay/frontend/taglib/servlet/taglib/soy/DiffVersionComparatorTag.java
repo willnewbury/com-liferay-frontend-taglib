@@ -33,6 +33,7 @@ import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
+import java.util.Date;
 import java.util.Locale;
 import java.util.Set;
 
@@ -54,10 +55,10 @@ public class DiffVersionComparatorTag extends TemplateRendererTag {
 
 		String diffVersionString = String.valueOf(diffVersion.getVersion());
 
-		long modifiedDate = diffVersion.getModifiedDate().getTime();
+		Date modifiedDate = diffVersion.getModifiedDate();
 
 		String timeDescription = LanguageUtil.getTimeDescription(
-			request, System.currentTimeMillis() - modifiedDate, true);
+			request, System.currentTimeMillis() - modifiedDate.getTime(), true);
 
 		diffVersionJSONObject.put(
 			"displayDate",
