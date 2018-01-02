@@ -53,8 +53,6 @@ public class DiffVersionComparatorTag extends TemplateRendererTag {
 
 		JSONObject diffVersionJSONObject = JSONFactoryUtil.createJSONObject();
 
-		String diffVersionString = String.valueOf(diffVersion.getVersion());
-
 		Date modifiedDate = diffVersion.getModifiedDate();
 
 		String timeDescription = LanguageUtil.getTimeDescription(
@@ -68,6 +66,8 @@ public class DiffVersionComparatorTag extends TemplateRendererTag {
 			"inRange",
 			diffVersion.getVersion() > _sourceVersion &&
 			diffVersion.getVersion() <= _targetVersion);
+
+		String diffVersionString = String.valueOf(diffVersion.getVersion());
 
 		diffVersionJSONObject.put(
 			"label",
