@@ -64,8 +64,8 @@ public class DiffVersionComparatorTag extends TemplateRendererTag {
 
 		diffVersionJSONObject.put(
 			"inRange",
-			diffVersion.getVersion() > _sourceVersion &&
-			diffVersion.getVersion() <= _targetVersion);
+			(diffVersion.getVersion() > _sourceVersion) &&
+			(diffVersion.getVersion() <= _targetVersion));
 
 		String diffVersionString = String.valueOf(diffVersion.getVersion());
 
