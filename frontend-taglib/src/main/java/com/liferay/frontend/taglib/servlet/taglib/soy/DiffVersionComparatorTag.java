@@ -80,12 +80,13 @@ public class DiffVersionComparatorTag extends TemplateRendererTag {
 		targetURL.setParameter("targetVersion", diffVersionString);
 
 		diffVersionJSONObject.put("targetURL", targetURL.toString());
-		diffVersionJSONObject.put("version", diffVersionString);
 
 		User user = UserLocalServiceUtil.getUser(diffVersion.getUserId());
 
 		diffVersionJSONObject.put("userInitials", user.getInitials());
 		diffVersionJSONObject.put("userName", user.getFullName());
+
+		diffVersionJSONObject.put("version", diffVersionString);
 
 		return diffVersionJSONObject;
 	}
