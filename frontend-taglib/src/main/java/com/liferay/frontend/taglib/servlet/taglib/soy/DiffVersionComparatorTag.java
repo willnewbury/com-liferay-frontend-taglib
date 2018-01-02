@@ -51,9 +51,8 @@ public class DiffVersionComparatorTag extends TemplateRendererTag {
 		throws PortalException {
 
 		JSONObject diffVersionJSONObject = JSONFactoryUtil.createJSONObject();
-		double diffVersionNumber = diffVersion.getVersion();
 
-		String diffVersionString = String.valueOf(diffVersionNumber);
+		String diffVersionString = String.valueOf(diffVersion.getVersion());
 
 		long modifiedDate = diffVersion.getModifiedDate().getTime();
 
@@ -66,8 +65,8 @@ public class DiffVersionComparatorTag extends TemplateRendererTag {
 
 		diffVersionJSONObject.put(
 			"inRange",
-			diffVersionNumber > _sourceVersion && diffVersionNumber <=
-				_targetVersion);
+			diffVersion.getVersion() > _sourceVersion &&
+			diffVersion.getVersion() <= _targetVersion);
 
 		diffVersionJSONObject.put(
 			"label",
