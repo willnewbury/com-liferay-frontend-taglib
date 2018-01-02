@@ -118,17 +118,15 @@ public class DiffVersionComparatorTag extends TemplateRendererTag {
 				(RenderResponse)request.getAttribute(
 					JavaConstants.JAVAX_PORTLET_RESPONSE);
 
-			PortletResponse portletResponse =
-				(PortletResponse)request.getAttribute(
-					JavaConstants.JAVAX_PORTLET_RESPONSE);
-
 			PortletURL sourceURL = PortletURLUtil.clone(
-				_portletURL, renderResponse);
-			PortletURL targetURL = PortletURLUtil.clone(
 				_portletURL, renderResponse);
 
 			sourceURL.setParameter(
 				"targetVersion", String.valueOf(_targetVersion));
+
+			PortletURL targetURL = PortletURLUtil.clone(
+				_portletURL, renderResponse);
+
 			targetURL.setParameter(
 				"sourceVersion", String.valueOf(_sourceVersion));
 
@@ -156,7 +154,13 @@ public class DiffVersionComparatorTag extends TemplateRendererTag {
 				"nextVersion",
 				String.valueOf(_diffVersionsInfo.getNextVersion()));
 			putValue("pathThemeImages", themeDisplay.getPathThemeImages());
+
+			PortletResponse portletResponse =
+				(PortletResponse)request.getAttribute(
+					JavaConstants.JAVAX_PORTLET_RESPONSE);
+
 			putValue("portletNamespace", portletResponse.getNamespace());
+
 			putValue("portletURL", _portletURL.toString());
 			putValue(
 				"previousVersion",
