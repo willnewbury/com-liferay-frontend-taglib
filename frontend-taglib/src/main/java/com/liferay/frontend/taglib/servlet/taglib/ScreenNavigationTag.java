@@ -152,6 +152,7 @@ public class ScreenNavigationTag extends IncludeTag {
 		}
 
 		request.setAttribute("liferay-frontend:screen-navigation:id", id);
+
 		request.setAttribute(
 			"liferay-frontend:screen-navigation:navCssClass", _navCssClass);
 		request.setAttribute(
